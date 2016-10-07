@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>StarWarsApp</title>
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container-fluid">
+    <h1>Star Wars universe planets</h1>
+</div>
+<div class="container-fluid">
+    <div class="clearfix">
+        <div class="btn-group inline pull-left" data-toggle="buttons-checkbox">
+            <div class="btn btn-primary" id="previous">Previous</div>
+            <div class="btn btn-warning" id="pageNo">Page: 1</div>
+            <div class="btn btn-primary" id="next">Next</div>
+        </div>
+    </div>
+</div>
+    <table class="table table-bordered" id="planetTable">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Diameter</th>
+            <th>Climate</th>
+            <th>Gravity</th>
+            <th>Terrain</th>
+            <th>Water</th>
+            <th>Population</th>
+            <th>Residents</th>
+        </tr>
+        </thead>
+        <tbody id="planetBody">
+        </tbody>
+    </table>
+<script type="text/javascript" src="/static/js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="/static/js/main.js"></script>
+
+</body>
+</html>
