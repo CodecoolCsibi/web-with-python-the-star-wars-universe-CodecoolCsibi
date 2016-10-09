@@ -20,24 +20,61 @@
         </div>
     </div>
 </div>
-    <table class="table table-bordered" id="planetTable">
-        <thead>
-        <tr>
-            <th>Name</th>
-            <th>Diameter</th>
-            <th>Climate</th>
-            <th>Gravity</th>
-            <th>Terrain</th>
-            <th>Water</th>
-            <th>Population</th>
-            <th>Residents</th>
-        </tr>
-        </thead>
-        <tbody id="planetBody">
-        </tbody>
-    </table>
-<script type="text/javascript" src="/static/js/jquery-3.1.1.min.js"></script>
-<script type="text/javascript" src="/static/js/main.js"></script>
+<table class="table table-bordered" id="planetTable">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Diameter</th>
+        <th>Climate</th>
+        <th>Gravity</th>
+        <th>Terrain</th>
+        <th>Water</th>
+        <th>Population</th>
+        <th>Residents</th>
+    </tr>
+    </thead>
+    <tbody id="planetBody">
+    </tbody>
+</table>
 
+<!-- Modal -->
+<div id="residentModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"></h4>
+            </div>
+            <div class="modal-body">
+                <!----- Modal Table ------>
+                <table class="table table-bordered" id="residentTable">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Height</th>
+                        <th>Mass</th>
+                        <th>Hair Color</th>
+                        <th>Eye Color</th>
+                        <th>Skin color</th>
+                        <th>Birth Year</th>
+                        <th>Gender</th>
+                    </tr>
+                    </thead>
+                    <tbody id="residentTableBody">
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="http://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+<script type="text/javascript" src="/static/js/main.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
 </body>
 </html>
