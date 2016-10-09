@@ -5,24 +5,26 @@ $(document).ready(function () {
 
 
     //Formatting the numbers longer than 4
-//     var formatLongNumber =  function(number){
-//     if (number.length > 4) {
-//         number = number.toString();
-//         var count = 0;
-//         var formattedNumber = 'a' * number.length;
-//         for (var i = number.length - 1; i > 0; i++) {
-//             formattedNumber.push(number.charAt(i));
-//             if (count % 3 == 0) {
-//                 formattedNumber.push('.');
-//                 formattedNumber = formattedNumber.toString()
-//             }
-//         }
-//
-//     } else{
-//         formattedNumber = number;
-//     }
-//     return formattedNumber
-// };
+    // (is not working, uncomment line 47 and 55 to see the magic,
+    // I have no idea about what the problem can be...)
+    var formatLongNumber =  function(number){
+    if (number.length > 4) {
+        number = number.toString();
+        var count = 0;
+        var formattedNumber = [];
+        for (var i = number.length - 1; i > 0; i++) {
+            formattedNumber.push(number.charAt(i));
+            if (count % 3 == 0) {
+                formattedNumber.push('.');
+            }
+
+        }
+        formattedNumber = formattedNumber.join(',').replace(/,/g, '');
+    } else{
+        formattedNumber = number;
+    }
+    return formattedNumber
+};
 
 
     // filling the Planets table
@@ -43,13 +45,17 @@ $(document).ready(function () {
                 keyArray.forEach(function (key, index, array) {
                     var tableCell = $('<td>');
                     if (key === 'diameter' && planet[key] !== 'unknown') {
-                            tableCell.html(planet[key] + 'km');
+                        number = planet[key];
+                        //number = formatLongNumber(number);
+                        tableCell.html(number + 'km');
                     }
                     else if (key == 'surface_water' && planet[key] !== "unknown") {
                         tableCell.html(planet[key] + '%');
                     }
                     else if (key === 'population' && planet[key] !== 'unknown') {
-                        tableCell.html(planet[key] + ' people');
+                        number = planet[key];
+                        //number = formatLongNumber(number);
+                        tableCell.html(number + ' people');
                     }
                     else if (key === 'residents') {
                         if (key !== 'unknown') {
